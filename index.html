@@ -1,315 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Nachimuthu | Zoho Certified Developer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Poppins',sans-serif;
-background:#f8fafc;
-color:#333;
-line-height:1.6;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:20px;
-}
-
-header{
-height:90vh;
-background:linear-gradient(135deg,#2563eb,#7c3aed);
-color:white;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-header h1{
-font-size:48px;
-margin-bottom:10px;
-}
-
-header p{
-font-size:20px;
-max-width:700px;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-background:white;
-color:#2563eb;
-padding:12px 28px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-}
-
-nav{
-position:sticky;
-top:0;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-text-align:center;
-padding:15px;
-}
-
-nav a{
-margin:0 15px;
-text-decoration:none;
-color:#333;
-font-weight:500;
-}
-
-.section{
-padding:80px 20px;
-}
-
-.section h2{
-text-align:center;
-font-size:34px;
-margin-bottom:40px;
-}
-
-.about{
-max-width:900px;
-margin:auto;
-font-size:17px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-}
-
-.card h3{
-margin-bottom:10px;
-color:#111827;
-}
-
-.skills{
-text-align:center;
-font-size:17px;
-max-width:800px;
-margin:auto;
-}
-
-.contact{
-text-align:center;
-}
-
-.contact a{
-display:inline-block;
-margin:10px;
-padding:12px 22px;
-border-radius:25px;
-text-decoration:none;
-background:#2563eb;
-color:white;
-}
-
-.whatsapp{
-background:#25D366;
-}
-
-footer{
-background:#111827;
-color:white;
-text-align:center;
-padding:25px;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nachimuthu Nagaraj - Zoho Creator Certified Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .section-padding { padding: 5rem 0; }
+        .smooth-scroll { scroll-behavior: smooth; }
+    </style>
 </head>
+<body class="bg-gray-50 text-gray-800 smooth-scroll">
 
-<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-gray-900">Nachimuthu<span class="text-purple-600">Dev</span></div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-purple-600 font-medium">Home</a>
+                    <a href="#about" class="hover:text-purple-600 font-medium">About</a>
+                    <a href="#services" class="hover:text-purple-600 font-medium">Services</a>
+                    <a href="#apps" class="hover:text-purple-600 font-medium">Apps & Integrations</a>
+                    <a href="#projects" class="hover:text-purple-600 font-medium">Projects</a>
+                    <a href="#contact" class="hover:text-purple-600 font-medium">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-4">
+                <a href="#home" class="block hover:text-purple-600 font-medium">Home</a>
+                <a href="#about" class="block hover:text-purple-600 font-medium">About</a>
+                <a href="#services" class="block hover:text-purple-600 font-medium">Services</a>
+                <a href="#apps" class="block hover:text-purple-600 font-medium">Apps & Integrations</a>
+                <a href="#projects" class="block hover:text-purple-600 font-medium">Projects</a>
+                <a href="#contact" class="block hover:text-purple-600 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-<header>
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-white pt-20">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Zoho Creator Certified Developer</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">8+ Years • 100+ Zoho One Projects Completed</p>
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <span class="bg-white/20 px-6 py-3 rounded-full font-semibold">Zoho CRM Expert</span>
+                    <span class="bg-white/20 px-6 py-3 rounded-full font-semibold">Creator Custom Apps</span>
+                    <span class="bg-white/20 px-6 py-3 rounded-full font-semibold">Marketplace Extensions</span>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#services" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition">See Services</a>
+                    <a href="#contact" class="border-2 border-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition">Contact Us</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-12 shadow-2xl">
+                    <i class="fas fa-code text-8xl text-white/30 mb-6"></i>
+                    <div class="text-3xl font-bold mb-2">Nachimuthu Nagaraj</div>
+                    <div class="text-white/80 mb-4">nachimuthunagarajnm@gmail.com</div>
+                    <div class="flex gap-4">
+                        <a href="https://wa.me/919688448122" target="_blank" class="w-12 h-12 bg-green-500/20 hover:bg-green-500/40 rounded-xl flex items-center justify-center transition">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/nachimuthunm?viewMode=1" target="_blank" class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center hover:bg-white/40 transition">
+                            <i class="fab fa-upwork text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h1>Nachimuthu</h1>
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">About Nachimuthu</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">I'm Nachimuthu, a Zoho Creator Certified Developer with 8+ years of experience in the Zoho ecosystem. I have successfully completed 100+ projects within Zoho One, helping businesses automate processes, streamline workflows, and improve efficiency.</p>
+            </div>
+        </div>
+    </section>
 
-<p>Zoho Creator Certified Developer | Zoho One Automation Specialist</p>
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">What I Can Help You With</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+                    <i class="fas fa-users text-4xl text-purple-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Zoho CRM</h3>
+                    <p>Setup, customization, workflows, Deluge scripting, blueprints & widgets</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+                    <i class="fas fa-cogs text-4xl text-purple-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Zoho Creator</h3>
+                    <p>Custom applications, client portals, approval workflows & REST APIs</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+                    <i class="fas fa-plug text-4xl text-purple-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">API Integrations</h3>
+                    <p>Stripe, Razorpay, QuickBooks, Twilio, WhatsApp, OpenAI, ServiceM8</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+                    <i class="fas fa-robot text-4xl text-purple-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">SalesIQ Chatbots</h3>
+                    <p>AI-driven Zobot chatbots with OpenAI & CRM integration</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+                    <i class="fas fa-sync-alt text-4xl text-purple-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Zoho One Automation</h3>
+                    <p>Desk, Books, Inventory, Projects, People cross-app workflows</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+                    <i class="fas fa-chart-bar text-4xl text-purple-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Zoho Analytics</h3>
+                    <p>Interactive dashboards, KPI reports & SQL analytics</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<a class="btn" href="https://www.upwork.com/freelancers/nachimuthunm?viewMode=1" target="_blank">Hire Me on Upwork</a>
+    <!-- Apps & Integrations Section -->
+    <section id="apps" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Zoho Apps & Integrations Expertise</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-16">Comprehensive experience across Zoho ecosystem with advanced customizations and third-party integrations.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gradient-to-br from-purple-500 to-blue-600 text-white p-8 rounded-2xl shadow-2xl">
+                    <i class="fas fa-layer-group text-5xl mb-6 opacity-75"></i>
+                    <h3 class="text-2xl font-bold mb-4">Zoho Modules Mastered</h3>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <span>✅ Zoho CRM</span>
+                        <span>✅ Zoho Creator</span>
+                        <span>✅ Zoho Books</span>
+                        <span>✅ Zoho Desk</span>
+                        <span>✅ Zoho People</span>
+                        <span>✅ SalesIQ/Zobot</span>
+                        <span>✅ Zoho Analytics</span>
+                        <span>✅ Zoho Flow</span>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-green-500 to-emerald-600 text-white p-8 rounded-2xl shadow-2xl">
+                    <i class="fas fa-plug text-5xl mb-6 opacity-75"></i>
+                    <h3 class="text-2xl font-bold mb-4">Payment Gateways</h3>
+                    <div class="space-y-2 text-sm">
+                        <span>💳 Stripe</span>
+                        <span>💳 Razorpay</span>
+                        <span>💳 PayPal</span>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-blue-500 to-cyan-600 text-white p-8 rounded-2xl shadow-2xl">
+                    <i class="fas fa-cloud text-5xl mb-6 opacity-75"></i>
+                    <h3 class="text-2xl font-bold mb-4">Cloud Storage</h3>
+                    <div class="space-y-2 text-sm">
+                        <span>☁️ Dropbox</span>
+                        <span>☁️ Google Drive</span>
+                        <span>📁 Zoho WorkDrive</span>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-orange-500 to-red-600 text-white p-8 rounded-2xl shadow-2xl">
+                    <i class="fas fa-robot text-5xl mb-6 opacity-75"></i>
+                    <h3 class="text-2xl font-bold mb-4">Communication</h3>
+                    <div class="space-y-2 text-sm">
+                        <span>📱 Twilio SMS</span>
+                        <span>💬 WhatsApp API</span>
+                        <span>🤖 OpenAI API</span>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-2xl shadow-2xl">
+                    <i class="fas fa-building text-5xl mb-6 opacity-75"></i>
+                    <h3 class="text-2xl font-bold mb-4">Accounting/ERP</h3>
+                    <div class="space-y-2 text-sm">
+                        <span>⚖️ QuickBooks</span>
+                        <span>📊 Tally</span>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-pink-500 to-rose-600 text-white p-8 rounded-2xl shadow-2xl">
+                    <i class="fas fa-store text-5xl mb-6 opacity-75"></i>
+                    <h3 class="text-2xl font-bold mb-4">Service Apps</h3>
+                    <div class="space-y-2 text-sm">
+                        <span>🔧 ServiceM8</span>
+                        <span>🎫 Zendesk</span>
+                        <span>📋 Freshdesk</span>
+                    </div>
+                </div>
+            </div>
 
-</header>
+            <div class="text-center">
+                <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-12 rounded-3xl shadow-2xl max-w-4xl mx-auto">
+                    <i class="fas fa-crown text-6xl mb-6"></i>
+                    <h3 class="text-3xl font-bold mb-4">Zoho Marketplace Developer</h3>
+                    <p class="text-xl mb-6">Published Zoho Desk & CRM extensions • Custom widgets with HTML/CSS/JS • Multi-brand Zoho One architecture</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<nav>
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Featured Projects</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group p-8 text-center">
+                    <i class="fas fa-globe text-5xl text-purple-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Zoho One Implementation</h3>
+                    <p class="text-gray-600 mb-6">Complete Zoho One setup with CRM, Desk, Books automation & WorkDrive integration</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group p-8 text-center">
+                    <i class="fas fa-solar-panel text-5xl text-green-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Solar Business Automation</h3>
+                    <p class="text-gray-600 mb-6">End-to-end Zoho Creator system: leads, BOM, inventory, Zoho Books sync</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group p-8 text-center">
+                    <i class="fas fa-robot text-5xl text-pink-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">AI Chatbot Solution</h3>
+                    <p class="text-gray-600 mb-6">SalesIQ Zobot with OpenAI, CRM integration & dynamic flows</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+    <!-- Contact Section - Updated Zoho Creator Form -->
+    <section id="contact" class="section-padding bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's Connect</h2>
+                <p class="text-xl text-gray-600 mb-8">I specialize in custom Zoho solutions, advanced automation, and third-party API integrations to optimize business operations.</p>
+                <p class="text-2xl font-bold text-purple-600 mb-12">"Reach out today, and let's build something amazing together!"</p>
+            </div>
+            
+            <!-- Updated Zoho Creator Contact Form Embed -->
+            <div class="bg-gray-50 rounded-2xl shadow-2xl p-8 mb-12">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold mb-4">Contact Form (Powered by Zoho Creator)</h3>
+                    <p class="text-lg text-gray-600">Fill out the form below and I'll get back to you within 24 hours</p>
+                </div>
+                <iframe 
+                    height='500px' 
+                    width='100%' 
+                    frameborder='0' 
+                    allowTransparency='true' 
+                    scrolling='auto' 
+                    src='https://creatorapp.zohopublic.com/nachimuthu39/nachimuthu-nagaraj/form-embed/Contact_Us/sUe4UtearRFSA1XDB43sTaCeTGCRROVwvAjdwDxNtT9rm5GzrXYjW8PtDGmnOYVsHXe5ZMAUh0ghGNdZCuevvHF2gHKuD1sFugSg'>
+                </iframe>
+            </div>
 
-</nav>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="bg-gradient-to-br from-purple-500 to-blue-600 text-white p-8 rounded-2xl shadow-2xl">
+                        <h3 class="text-2xl font-bold mb-6">Quick Contact</h3>
+                        <div class="space-y-4 text-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-2xl mr-4"></i>
+                                <span>nachimuthunagarajnm@gmail.com</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fab fa-whatsapp text-2xl text-green-400 mr-4 mt-1"></i>
+                                <span><strong>WhatsApp:</strong> <a href="https://wa.me/919688448122" class="hover:underline font-semibold">+91 9688448122</a></span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-2xl mr-4"></i>
+                                <span>Tiruppur, Tamil Nadu, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <a href="https://wa.me/919688448122" target="_blank" class="block w-full bg-green-500 text-white text-center py-4 px-6 rounded-2xl font-semibold hover:bg-green-600 transition flex items-center justify-center gap-2 text-lg">
+                        <i class="fab fa-whatsapp"></i>
+                        Start WhatsApp Chat
+                    </a>
+                    <a href="https://www.upwork.com/freelancers/nachimuthunm?viewMode=1" target="_blank" class="block w-full bg-purple-600 text-white text-center py-4 rounded-2xl font-semibold hover:bg-purple-700 transition text-lg">
+                        Hire Me on Upwork
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="about" class="section">
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="text-2xl font-bold mb-6">Nachimuthu Nagaraj</div>
+            <p class="mb-4">WhatsApp: <a href="https://wa.me/919688448122" class="hover:text-green-400">+91 9688448122</a> | <a href="https://www.upwork.com/freelancers/nachimuthunm?viewMode=1" target="_blank" class="hover:text-purple-400">Upwork Profile</a></p>
+            <p>&copy; 2026 Zoho Creator Certified Developer. Built with ❤️ for Zoho excellence.</p>
+        </div>
+    </footer>
 
-<h2>About Me</h2>
+    <script>
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-<div class="about">
-
-<p>
-
-Hello, I'm Nachimuthu, a Zoho Creator Certified Developer with 8+ years of experience in the Zoho ecosystem. I have successfully completed 100+ projects within Zoho One, helping businesses automate processes, streamline workflows, and improve efficiency.
-
-</p>
-
-<br>
-
-<p>
-
-I specialize in building scalable Zoho solutions including CRM automation, custom Zoho Creator applications, chatbot development, and third-party API integrations. My goal is to help companies reduce manual work, improve productivity, and create smarter business systems.
-
-</p>
-
-</div>
-
-</section>
-
-<section id="services" class="section">
-
-<h2>Services</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Zoho CRM Development</h3>
-<p>CRM setup, customization, workflows, Blueprints, and Deluge scripting.</p>
-</div>
-
-<div class="card">
-<h3>Zoho Creator Applications</h3>
-<p>Custom applications, internal tools, and client portals built using Zoho Creator.</p>
-</div>
-
-<div class="card">
-<h3>Zoho One Automation</h3>
-<p>Cross-application automation across CRM, Desk, Books, Inventory, Projects, and People.</p>
-</div>
-
-<div class="card">
-<h3>Zoho SalesIQ Chatbots</h3>
-<p>Lead capture bots, AI chatbots, and CRM integrated support chat systems.</p>
-</div>
-
-<div class="card">
-<h3>API Integrations</h3>
-<p>Integrations with OpenAI, Stripe, QuickBooks, Twilio, WhatsApp, Dropbox, and more.</p>
-</div>
-
-<div class="card">
-<h3>Data Migration & Analytics</h3>
-<p>Data migration, cleanup, synchronization, and Zoho Analytics dashboards.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="projects" class="section">
-
-<h2>Zoho Implementation Projects</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Zoho CRM Implementation – Syncezy (Australia)</h3>
-<p>Complete CRM implementation managing sales lifecycle, proposals, subscriptions, and Zoho Books integration.</p>
-</div>
-
-<div class="card">
-<h3>Zoho Creator Finance System</h3>
-<p>Custom invoice and payroll management system used across multiple countries.</p>
-</div>
-
-<div class="card">
-<h3>Zoho Desk Support Platform</h3>
-<p>Customer support ticketing system with automated workflows and priority management.</p>
-</div>
-
-<div class="card">
-<h3>Zoho SalesIQ Chatbot</h3>
-<p>AI powered chatbot collecting leads, booking meetings, and raising support tickets.</p>
-</div>
-
-<div class="card">
-<h3>Zoho CRM for Law Firm (USA)</h3>
-<p>Legal intake automation, consultation tracking, and case workflow management.</p>
-</div>
-
-<div class="card">
-<h3>Document Automation</h3>
-<p>Zoho Writer merge templates integrated with Zoho Sign for engagement letters.</p>
-</div>
-
-<div class="card">
-<h3>WorkDrive File Automation</h3>
-<p>Automatic case folder creation and document organization for legal clients.</p>
-</div>
-
-<div class="card">
-<h3>Zoho Bookings Integration</h3>
-<p>Client meeting scheduling system integrated with CRM and calendars.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact" class="section contact">
-
-<h2>Contact</h2>
-
-<p>Email: nachimuthunagarajnm@gmail.com</p>
-
-<p>Phone: +91 9688448122</p>
-
-<a href="mailto:nachimuthunagarajnm@gmail.com">Send Email</a>
-
-<a href="https://wa.me/919688448122" class="whatsapp" target="_blank">WhatsApp</a>
-
-<a href="https://www.upwork.com/freelancers/nachimuthunm?viewMode=1" target="_blank">Upwork Profile</a>
-
-</section>
-
-<footer>
-
-<p>© 2026 Nachimuthu | Zoho Developer Portfolio</p>
-
-</footer>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 
 </body>
 </html>
